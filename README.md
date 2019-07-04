@@ -1,10 +1,10 @@
-#Feature Map Denosing
+# Feature Map Denosing
 
-##Requirements
+## Requirements
 pytorch 1.0.0
 advertorch 0.1.4
 
-##Usage
+## Usage
 ```
 usage: main.py [-h] [-a ARCH] [-j N] [--epochs N] [--start-epoch N] [-b N]
                [--lr LR] [--momentum M] [--wd W] [-p N] [--resume PATH] [-e]
@@ -58,8 +58,11 @@ optional arguments:
   --advtrain            use adversarial training
 
 ```
-##Example
-###Basic Training
+
+## Example
+
+### Basic Training
+
 Train with pretrained:
 ```
 python main.py --arch resnet101 --epochs 10 --lr 0.005 -b 60 --pretrained ./dataset 
@@ -70,7 +73,8 @@ Train begin with checkpoint:
 python main.py --arch resnet101 --epochs 18 --lr 0.0005 -b 60 --resume path/to/your/checkpoint ./dataset 
 ```
 
-###Adversarial Training
+### Adversarial Training
+
 Train with pretrained:
 ```
 python main.py --arch resnet101 --epochs 10 --lr 0.005 -b 60 --pretrained --advtrain ./dataset 
@@ -81,5 +85,6 @@ Train begin with checkpoint:
 python main.py --arch resnet101 --epochs 18 --lr 0.0005 -b 60 --resume path/to/your/checkpoint --advtrain ./dataset 
 ```
 
-###Feature Denoising
+### Feature Denoising
+
 To test the effection of feature denoising, simply change `--arch resnet101` to `--arch FD_resnet101`. It is a modified resnet with a non-local mean block.
