@@ -90,3 +90,7 @@ python main.py --arch resnet101 --epochs 18 --lr 0.0005 -b 60 --resume path/to/y
 ### Feature Denoising
 
 To test the effection of feature denoising, simply change `--arch resnet101` to `--arch FD_resnet101`. It is a modified resnet with a non-local mean block.
+
+##License
+
+See the LICENSE file for license rights and limitations (MIT).
