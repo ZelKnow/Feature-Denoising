@@ -1,6 +1,6 @@
 # Feature Map Denosing
 
-Using feature map denosing method to imporve network's robustness against adversarial attack by adding denoising blocks (in my implementation it is a [non-local means block](https://arxiv.org/abs/1711.07971)) into the network. Testing on the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset. Training with a GTX-1080 gpu and get the following result:
+Using feature map denosing method to imporve network's robustness against adversarial attack by adding denoising blocks (in my implementation it is a [non-local means block](https://arxiv.org/abs/1711.07971)) into the network. Tested on the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset. Trained with a GTX-1080 gpu and got the following result:
 
 | model | accuracy(%) |
 | ---- | ----|
@@ -15,9 +15,9 @@ Using feature map denosing method to imporve network's robustness against advers
 
 ## Requirements
 
-pytorch 1.0.0
+[pytorch](https://github.com/pytorch/pytorch) 1.0.0
 
-advertorch 0.1.4
+[advertorch](https://github.com/BorealisAI/advertorch) 0.1.4
 
 ## Usage
 
@@ -108,3 +108,7 @@ python main.py --arch resnet101 --epochs 18 --lr 0.0005 -b 60 --resume path/to/y
 ### Feature Denoising
 
 To test the effect of feature denoising, simply change `--arch resnet101` to `--arch FD_resnet101`. It is a modified resnet with a non-local mean block appended.
+
+## License
+
+This project is MIT licensed, as found in the LICENSE file.
