@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch.utils.model_zoo as model_zoo
 import torch
 from torch.nn import functional as F
-from non_local_embedded_gaussian import NONLocalBlock2D
+from .non_local_embedded_gaussian import NONLocalBlock2D
 
 
 __all__ = ['ResNet', 'resnet18', 'resnet34', 'resnet50', 'resnet101',
