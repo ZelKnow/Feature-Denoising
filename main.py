@@ -18,11 +18,11 @@ import torch.utils.data.distributed
 import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 import torchvision.models as models
+import model.resnet as modified_resnet101
 
 from advertorch.context import ctx_noparamgrad_and_eval
 from advertorch.attacks import LinfPGDAttack
 from advertorch.utils import predict_from_logits
-import resnet as modified_resnet101
 
 model_names = sorted(name for name in models.__dict__
     if name.islower() and not name.startswith("__")
