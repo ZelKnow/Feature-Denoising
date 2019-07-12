@@ -19,6 +19,10 @@ Using feature map denosing method to imporve network's robustness against advers
 
 [advertorch](https://github.com/BorealisAI/advertorch) 0.1.4
 
+## Dataset
+
+Using CIFAR-10 as the dataset. Cause the dataset is to large, I am not going to put the dataset in the folder. You can either download the [dataset](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz) and put it in `./dataset`, or just simply start training, the dataset will download automatically.
+
 ## Usage
 
 ```
